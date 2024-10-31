@@ -2,7 +2,7 @@
 
 ## Create database and perform all basic queries.
 
-- **To Create Database**
+- **To Create Database** (CREATE & USE Query)
 
   `CREATE DATABASE blood_bank;`
   
@@ -120,3 +120,67 @@
   *Output:*
   
   <img src="output_images/8_order_by.png">
+
+---
+
+- **Inner Join Query**
+
+  `SELECT u.donor_name, u.donor_email, d.donation_amount, d.donation_date`
+  
+  `FROM users u`
+  
+  `INNER JOIN donations d ON u.donor_email = d.donator_email;`  
+  
+  *Output:*
+  
+  <img src="output_images/9_inner_join.png">
+---
+
+- **Left Join Query**
+
+  `SELECT u.donor_name, u.donor_email, d.donation_amount, d.donation_date`
+  
+  `FROM users u`
+  
+  `LEFT JOIN donations d ON u.donor_email = d.donator_email;`
+  
+  *Output:*
+  
+  <img src="output_images/10_left_join.png">
+
+---
+
+- **Right Join Query**
+
+  `SELECT u.donor_name, u.donor_email, d.donation_amount, d.donation_date`
+  
+  `FROM users u`
+  
+  `RIGHT JOIN donations d ON u.donor_email = d.donator_email;`
+
+  *Output:*
+  
+  <img src="output_images/11_right_join.png">
+
+---
+
+- **Full Outer-Join Query**
+
+  `SELECT u.donor_name, u.donor_email, d.donation_amount, d.donation_date`
+  
+  `FROM users u`
+  
+  `LEFT JOIN donations d ON u.donor_email = d.donator_email`
+  
+  `UNION`
+  
+  `SELECT u.donor_name, u.donor_email, d.donation_amount, d.donation_date`
+  
+  `FROM users u`
+  
+  `RIGHT JOIN donations d ON u.donor_email = d.donator_email;`
+ 
+  
+  *Output:*
+  
+  <img src="output_images/12_full_outer.png">
